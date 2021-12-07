@@ -13,10 +13,10 @@
         <p> La perfection passe par l'organisation</p>
         <nav>
             <ul class="nav_links">
-                <li><a href="#offers" >Nos offres</a></li>
-                <li><a href="#team">Notre équipe</a></li>
-                <li><a href="#contact">Nous contacter</a></li>
-                <li><a href="account.html">Mon compte</a></li>
+                <li><a onClick="scrollToSection('offers')" >Nos offres</a></li>
+                <li><a onClick="scrollToSection('team')">Notre équipe</a></li>
+                <li><a onClick="scrollToSection('contact')">Nous contacter</a></li>
+                <li><a href="./account">Mon compte</a></li>
             </ul>
         </nav>
     </div>
@@ -75,13 +75,6 @@
                     </div>
                     <div class="card-footer"><a class="btn" onclick="selectService('event')">Choisir</a></div>
                 </div>
-                <div class="card" id="bienetre">
-                    <div class="card-header">Bien-être</div>
-                    <div class="card-body">
-                        <p>Vos rendez-vous bien-être et santé , quand vous voulez.</p>
-                        </div>
-                    <div class="card-footer"><a class="btn" onclick="selectService('bienetre')">Choisir</a></div>
-                </div>
                 <div class="card" id="voiture">
                     <div class="card-header">Voiture</div>
                     <div class="card-body">
@@ -99,7 +92,7 @@
         <table class="team-grid">
             <tr>
                 <th>
-                    <img src="assets/avatar.jpg" alt="photo de profil" id="Thomas">
+                    <img src="assets/avatar.jpg" alt="photo de profil" id="thomas">
                 </th>
                 <th>
                     <img src="assets/adrien.jpg" alt="photo de profil" id="adrien">
@@ -108,10 +101,10 @@
                     <img src="assets/Lola.png" alt="photo de profil" id="lola">
                 </th>
                 <th>
-                    <img src="assets/avatar.jpg" alt="photo de profil" id="member3">
+                    <img src="assets/JB.jpg" alt="photo de profil" id="jb">
                 </th>
                 <th>
-                    <img src="assets/avatar.jpg" alt="photo de profil" id="member4">
+                    <img src="assets/maveline.png" alt="photo de profil" id="maveline">
                 </th>
             </tr>
             <tr>
@@ -155,6 +148,8 @@
         </table>
 
     </div>
+    <div class="space"></div>
+    <p class="contact-info">Votre concierge personnel prendra contact avec vous pour vous proposer un entretien durant lequel il s'attachera à en savoir plus sur votre mode de vie, vos attentes et vos besoins. Vos échanges sont ainsi plus efficaces, votre concierge ayant pris connaissance de votre profil pour traiter à la hauteur de vos exigences chacune de vos demandes</p>
     <div class="space"></div>
     <div class="contact" id="contact">
         <div class="text"> Nous contacter </div>
@@ -211,7 +206,7 @@
                 break;
             
             case "premium-butler":
-                maxServices = 5
+                maxServices = 4
                 break;
         
             default:
@@ -246,6 +241,11 @@
 
         element.style.border = "2px solid white"
         selectedServices.push(element)
+    }
+
+    function scrollToSection (section) {
+        var topOfElement = document.getElementById(section).offsetTop - 90
+        window.scroll({ top: topOfElement })
     }
 
 

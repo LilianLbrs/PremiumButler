@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mohave&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mohave&family=Open+Sans&display=swap');
 
+
 *, *::before, *::after {
   font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
@@ -54,6 +55,7 @@ li, .header a {
   text-transform: uppercase;
   color: #edf0f1;
   text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -320,7 +322,9 @@ li, .header a {
 }
 
 .contact-info {
+  width: 70ch;
   text-align: center;
+  margin: 16px auto;
 }
 
 .contact a {
