@@ -8,6 +8,12 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --clr-primary : #000;
+  --clr-secondary : #1a1b1f;
+  --clr-tertiary : #363636;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -141,7 +147,7 @@ li, .header a {
   margin: 0 auto;
   max-width: 50ch;
   color: #edf0f1;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .name::before {
@@ -304,12 +310,16 @@ li, .header a {
 
 .services-buttons .btn-partners{
   margin: 10px;
-  background-color: #93defc;
+  color: white;
+  border: 2px solid white;
+  background: none;
 }
 
 .services-buttons .btn-validate{
   margin: 10px;
-  background-color: #50ee85;
+  color: white;
+  border: 2px solid white;
+  background: none;
 }
 
 .btn:hover , .btn:focus {
@@ -346,6 +356,11 @@ li, .header a {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+}
+
+.team a {
+  color: #edf0f1;
+  font-size: 0.8rem;
 }
 
 /* Contact */
@@ -450,10 +465,20 @@ resize: none;
 /* Footer */
 
 .footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   height: 50px;
   text-align: center;
   margin-top: 2.5rem;
   border-top: #1a1b1f 3px solid;;
+}
+
+.footer a {
+  color: #edf0f1;
+
 }
 
 /* Scroll Bar */
@@ -491,47 +516,32 @@ resize: none;
 .partners-container{
   display: flex;
   flex-direction: column;
+  background: var(--clr-secondary);
   color: white;
-  background-color: #363636;
-  border-radius: 25px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 0;
 
-}
-
-.pressing{
-  background: url(pressing.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.voiture{
-  background: url(voiture.jpg);
-  background-size: 150%;
-  background-repeat: no-repeat;
-  background-position: bottom;
 }
 
 .partners-container .partners-header{
-  color: #1a1b1f;
+  color: #fff;
   font-style: bold;
 }
 
 .partners-grid{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .partners-grid-item{
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
-  padding: 0.5rem;
-  background: #363636;
+  background: var(--clr-secondary);
+  padding: 1rem;
   box-shadow: 0 2px 10px 0 rgb(0, 0, 0);
-  margin: 5px;
+  margin: 1rem;
 }
 
 .partners-grid-subitem ~ .partners-grid-subitem{
@@ -560,3 +570,13 @@ resize: none;
 
 }
 
+
+/* CGV */
+
+.cgv {
+  color: #edf0f1;
+}
+
+.cgv-header {
+
+}
