@@ -111,8 +111,8 @@ li, .header a {
   width: 75%;
   margin-left: 12.5%;
   border-radius: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* About Us */
@@ -144,10 +144,11 @@ li, .header a {
 
 .text {
   text-align: center;
-  margin: 0 auto;
+  text-transform: uppercase;
+  margin: 0 auto 2rem;
   max-width: 50ch;
   color: #edf0f1;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .name::before {
@@ -211,29 +212,38 @@ li, .header a {
   justify-self: center;
 }
 
+#courses .card-header {
+  background-image: url(courses.jpg);
+  background-size: cover;
+}
+
+#pressing .card-header {
+  background-image: url(pressing.jpg);
+  background-size: cover;
+}
+
+#event .card-header {
+  background-image: url(event.jpg);
+  background-size: cover;
+}
+
+#voiture .card-header {
+  background-image: url(voiture.jpg);
+  background-size: cover;
+}
+
 .card-header {
   font-family: "Mohave";
   font-weight: 400;
   font-size: 20px;
   color: #edf0f1;
-  background: #1a1b1f;
+  background-color: #1a1b1f;
   text-transform: uppercase;
   padding: var(--padding);
   margin-bottom: .5rem;
   border-bottom: 2px solid #edf0f1;
 }
 
-.card-header.bronze {
-  border-bottom: 2px solid #614e1a;
-}
-
-.card-header.silver {
-  border-bottom: 2px solid silver;
-}
-
-.card-header.gold {
-  border-bottom: 2px solid gold;
-}
 
 .card-body {
   font-size: .9rem;
@@ -351,11 +361,12 @@ li, .header a {
   padding: 0 1rem;
 }
 
-.team img{
-  max-height: 100px;
-  height: 100px;
-  width: 100px;
+
+.team img {
+  width: 150px; 
+  height: 150px; 
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .team a {
@@ -364,6 +375,31 @@ li, .header a {
 }
 
 /* Contact */
+
+.section-contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.contact-text {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.contact-img {
+  height: auto;
+  width: 550px;
+  justify-self: flex-end;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.contact-img img {
+  width: 550px;
+  border-radius: 5px;
+}
 
 .contact {
   background-color: black;
@@ -375,23 +411,28 @@ li, .header a {
   margin: 16px auto;
 }
 
-.contact a {
+.section-contact a {
   color: #edf0f1;
 }
 
 .contact-form {
   max-width: 550px;
-  margin: 0 auto;
+  height: calc(100% - 60px);
   background: #1a1b1f;
   padding: 30px;
   border-radius: 5px;
   display: flex;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  justify-self: flex-start;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .contact-fields {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 3rem;
   margin-right: 4%;
 }
 
@@ -405,18 +446,24 @@ input, textarea {
 
 .input,
 .contact-msg textarea {
-  margin: 10px 0;
   background: transparent;
   border: 0;
   border-bottom: 2px solid #edf0f1;
   padding: 10px;
   color: #edf0f1;
-  width: 100%;
+  max-width: 550px;
 }
 
 .contact-msg textarea {
-  height: 160px;
-resize: none;
+  margin-top: 20px;
+  height: 219px;
+  resize: none;
+}
+
+.contact-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ::-webkit-input-placeholder {
@@ -449,16 +496,47 @@ resize: none;
   background: #6b6b6b;
 }
 
+@media (max-width: 1100px) {
+  .section-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 500px;
+  }
+
+  .contact-msg textarea {
+    margin-top: 0%;
+    height: 120px;
+    
+  }
+
+  .contact-btn {
+    margin-top: 1rem;
+  }
+
+  .contact-fields {
+    margin-bottom: 4rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .contact-form {
     flex-direction: column;
   }
-  .msg textarea {
+  .contact-msg textarea {
     height: 80px;
   }
   .contact-fields, .contact-btn {
     width: 100%;
     transform: translateX(0);
+  }
+
+  .contact-img img {
+    width: 100%;
   }
 }
 
@@ -520,7 +598,10 @@ resize: none;
   color: white;
   padding: 1rem;
   margin: 1rem 0;
+}
 
+.partners-container ul {
+  list-style: none;
 }
 
 .partners-container .partners-header{
@@ -535,12 +616,18 @@ resize: none;
   flex-wrap: wrap;
 }
 
+.partners-grid-header {
+  font-style: bold;
+  font-size: 1.5rem;
+  height: 50px;
+}
+
 .partners-grid-item{
   display: flex;
   flex-direction: column;
+  width: max-content;
   background: var(--clr-secondary);
   padding: 1rem;
-  box-shadow: 0 2px 10px 0 rgb(0, 0, 0);
   margin: 1rem;
 }
 
@@ -575,8 +662,26 @@ resize: none;
 
 .cgv {
   color: #edf0f1;
+  padding: 1rem;
+}
+
+.cgv a {
+  color: gold;
 }
 
 .cgv-header {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
 
+.cgv-center {
+  text-align: center;
+  margin: 1rem;
+}
+
+.cgv-title {
+  font-weight: bold;
+  margin: 1rem;
 }
