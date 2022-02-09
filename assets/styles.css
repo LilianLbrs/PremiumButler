@@ -581,83 +581,6 @@ input, textarea {
 	background-color: #555;
 }
 
-/* Partners */
-
-.partners-header{
-  color: #edf0f1;
-  text-transform: uppercase;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.partners-container{
-  display: flex;
-  flex-direction: column;
-  background: var(--clr-secondary);
-  color: white;
-  padding: 1rem;
-  margin: 1rem 0;
-}
-
-.partners-container ul {
-  list-style: none;
-}
-
-.partners-container .partners-header{
-  color: #fff;
-  font-style: bold;
-}
-
-.partners-grid{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.partners-grid-header {
-  font-style: bold;
-  font-size: 1.5rem;
-  height: 50px;
-}
-
-.partners-grid-item{
-  display: flex;
-  flex-direction: column;
-  width: max-content;
-  background: var(--clr-secondary);
-  padding: 1rem;
-  margin: 1rem;
-}
-
-.partners-grid-subitem ~ .partners-grid-subitem{
-  padding-top: 0.5rem;
-}
-
-.partners-container a {
-  color: #fafc93;
-}
-
-.partners-container table{
-  border: 1px solid #edf0f1;
-}
-
-.partners-container tr{
-  border: 1px solid #edf0f1;
-}
-
-.partners-container td{
-  border: 1px solid #edf0f1;
-}
-
-
-
-.partners-infos{
-
-}
-
-
 /* CGV */
 
 .cgv {
@@ -684,4 +607,77 @@ input, textarea {
 .cgv-title {
   font-weight: bold;
   margin: 1rem;
+}
+
+
+/* Partners */
+
+.partners-header{
+  color: #edf0f1;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.partners-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background: var(--clr-secondary);
+  color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.partners-brand {
+  background-color: var(--clr-tertiary);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .5rem .5rem;
+  width: 30ch;
+}
+
+.brand-image {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-brand img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.brand-details {
+  margin: 1rem 0;
+}
+
+.brand-address {
+  margin: 0;
+  cursor: default;
+}
+
+.brand-tel {
+  color: #fafc93;
+}
+
+.brand-address, .brand-tel {
+  font-size: .8em;
+}
+
+.partners-container ul {
+  list-style: none;
+}
+
+.partners-container .partners-header{
+  color: #fff;
+  font-style: bold;
 }
