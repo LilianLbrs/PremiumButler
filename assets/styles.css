@@ -626,7 +626,7 @@ input, textarea {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  background: var(--clr-secondary);
+/*   background: var(--clr-secondary); */
   color: white;
   padding: 1rem;
   margin: 1rem 0;

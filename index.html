@@ -32,7 +32,7 @@
             <div class="card" id="premium">
                 <div class="card-header silver">Premium</div>
                 <div class="card-body">
-                    <p class="offers-description"> Pour vous qui êtes occupé, l’offre premium comprend 3 services au choix.</p>
+                    <p class="offers-description"> Pour vous qui êtes occupé, l’offre premium comprend 2 services au choix.</p>
                 </div>
                 <div class="card-footer"> <a class="btn"  onclick="select('premium')"> Selectionner </a>
                 </div>
@@ -51,7 +51,7 @@
         <br>
         <div class="services" id="services">
             <div class="text">Nos services</div>
-            <div class="services-info"><p> Tous nos services sont disponibles de 9h à 18h du lundi au vendredi</p></div>
+            <div class="services-info"><p> Tous nos services sont disponibles de 9h à 18h du lundi au vendredi et le samedi de 9h à 12h et de 14h à 18h</p></div>
             <div class="card-grid">
                 <div class="card" id="courses">
                     <div class="card-header">Courses</div>
@@ -213,7 +213,7 @@
         selected = offer
         switch (selected) {
             case "premium":
-                maxServices = 3
+                maxServices = 2
                 break;
             
             case "premium-butler":
