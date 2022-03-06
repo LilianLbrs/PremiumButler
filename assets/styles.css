@@ -508,6 +508,10 @@ input, textarea {
     width: 500px;
   }
 
+  .text {
+    font-size: 1.5em;
+  }
+
   .contact-msg textarea {
     margin-top: 0%;
     height: 120px;
@@ -680,4 +684,39 @@ input, textarea {
 .partners-container .partners-header{
   color: #fff;
   font-style: bold;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .nav_links {
+    display: none;
+  }
+
+  .contact-img {
+    width : 100vw
+  }
+
+  .contact-form {
+    width : 90vw
+  }
+
+  .contact-info {
+    width: 35ch;
+    text-align: center;
+    margin: 16px auto;
+  }
+
+  .name {
+    font-size: 4em;
+  }
+
+  .name::before {
+    display: none;
+  }
+
+  .name::after {
+    display: none;
+  }
 }
